@@ -20,3 +20,5 @@ urlpatterns = [
     path('topics/', views.topicsPage, name="topics"),
     path('activity/', views.activityPage, name="activity"),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
